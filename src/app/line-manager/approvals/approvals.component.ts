@@ -7,7 +7,6 @@ import {
 } from 'src/app/shared';
 
 @Component({
-  selector: 'app-approvals',
   templateUrl: './approvals.component.html',
   styleUrls: ['./approvals.component.scss']
 })
@@ -30,8 +29,10 @@ export class ApprovalsComponent implements OnInit {
   async ngOnInit() {
     try {
       const claimsData = await this.lineManagerService.fetchClaimsToApprove();
+      console.log(claimsData);
       this.lineManager = claimsData.data.lineManager;
       this.claimsToApprove = claimsData.data.pendingClaims;
+      console.log(this.claimsToApprove)
       this.message = 'the following claim requests await your approval';
       this.displaySpinner = false;
     } catch (error) {
