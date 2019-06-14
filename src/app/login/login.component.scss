@@ -19,7 +19,7 @@
     .brand {
       margin-top: 30px;
       .image-wrapper {
-        width: 80px;
+        width: 120px;
         margin: auto;
         cursor: pointer;
         img {
@@ -34,7 +34,7 @@
         font-size: 2.4rem;
         color: #000000;
         margin: auto;
-        span {
+        .the-v {
           color: $brand-color;
         }
         @media screen and (max-width: 400px) {
@@ -113,9 +113,8 @@
       text-align: center;
       margin-top: 30px;
       a {
-        color: $brand-color;
+        color: $faint-color;
         text-decoration: none;
-        opacity: .70;
       }
     }
   }
